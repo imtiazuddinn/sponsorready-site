@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SponsorReady — sponsored UK roles you can actually get</title>
+<meta name="description" content="On the Graduate visa? We check every UK job against the real sponsorship rules — licence, salary going rate, blockers — and prepare each application. 10 pilot places, £29.">
+<meta property="og:title" content="Stop applying to UK jobs that can never sponsor you">
+<meta property="og:description" content="Most sponsored-job lists only check whether a company holds a licence. We check whether this role can legally sponsor you — then prepare the application.">
+<meta property="og:type" content="website">
+
+<!-- ──────────────────────────────────────────────────────────────────────────
+     THE ONLY THREE LINES YOU NEED TO EDIT
+     ────────────────────────────────────────────────────────────────────────── -->
+<script>
+  const PAYPAL_LINK  = "#";                      // 1. your PayPal.me / payment-link URL
+  const CONTACT_EMAIL = "set-your-email@example.com";   // 2. a dedicated address, not your personal one
+  const META_PIXEL_ID = "";                      // 3. Meta pixel id (leave "" until the ad account exists)
+</script>
+<!-- ────────────────────────────────────────────────────────────────────────── -->
+
+<style>
+  :root{
+    --bg:#fbfaf8; --panel:#ffffff; --ink:#15181d; --muted:#5c646f; --line:#e6e2db;
+    --accent:#1b5e4b; --accent-ink:#ffffff; --warn:#8a4b12; --soft:#f2efe9;
+    --radius:14px; --maxw:960px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121417; --panel:#191c21; --ink:#f0eee9; --muted:#a2aab5; 
+      --line:#2b3037; --accent:#4ec49c; --accent-ink:#0d1714; --warn:#e0a86a; --soft:#20242a;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding-inline:20px;
+  }
+  .wrap{max-width:var(--maxw); margin-inline:auto}
+  a{color:inherit}
+  h1,h2,h3{line-height:1.2; letter-spacing:-0.02em; margin:0}
+  h1{font-size:clamp(1.9rem,5.2vw,3.1rem); font-weight:700}
+  h2{font-size:clamp(1.3rem,3.4vw,1.85rem); font-weight:650; margin-bottom:.6rem}
+  h3{font-size:1.02rem; font-weight:650}
+  p{margin:.7rem 0}
+  .lede{font-size:clamp(1.02rem,2.4vw,1.2rem); color:var(--muted); max-width:62ch}
+  .eyebrow{
+    display:inline-block; font-size:.76rem; font-weight:650; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent); border:1px solid var(--line);
+    background:var(--panel); padding:.35rem .7rem; border-radius:999px;
+  }
+  header.nav{
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding-block:1.4rem; border-bottom:1px solid var(--line); flex-wrap:wrap;
+  }
+  .brand{font-weight:700; letter-spacing:-.02em; font-size:1.06rem}
+  .brand span{color:var(--accent)}
+  .nav a.quiet{color:var(--muted); text-decoration:none; font-size:.92rem}
+  section{padding-block:clamp(2.4rem,6vw,4rem); border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .btn{
+    display:inline-block; background:var(--accent); color:var(--accent-ink);
+    text-decoration:none; font-weight:650; padding:.85rem 1.5rem; border-radius:999px;
+    border:0; cursor:pointer; font-size:1rem;
+  }
+  .btn:hover{filter:brightness(1.08)}
+  .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+  .cta-row{display:flex; gap:.8rem; flex-wrap:wrap; align-items:center; margin-top:1.4rem}
+  .fineprint{font-size:.85rem; color:var(--muted)}
+  .grid{display:grid; gap:1rem}
+  @media(min-width:680px){ .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)} }
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.2rem 1.25rem;
+  }
+  .stat{font-size:1.9rem; font-weight:700; letter-spacing:-.03em; color:var(--accent)}
+  .stat small{display:block; font-size:.85rem; font-weight:500; color:var(--muted); letter-spacing:0; margin-top:.3rem}
+  ul.clean{list-style:none; padding:0; margin:.8rem 0}
+  ul.clean li{padding-left:1.6rem; position:relative; margin:.55rem 0}
+  ul.clean li::before{
+    content:"✓"; position:absolute; left:0; top:-1px; color:var(--accent); font-weight:700;
+  }
+  ul.nope li::before{content:"✕"; color:var(--warn)}
+  ol.steps{counter-reset:s; list-style:none; padding:0; margin:0; display:grid; gap:1rem}
+  ol.steps li{
+    counter-increment:s; background:var(--panel); border:1px solid var(--line);
+    border-radius:var(--radius); padding:1.1rem 1.2rem 1.1rem 3.4rem; position:relative;
+  }
+  ol.steps li::before{
+    content:counter(s); position:absolute; left:1.1rem; top:1.05rem;
+    width:1.7rem; height:1.7rem; border-radius:50%; background:var(--accent);
+    color:var(--accent-ink); font-weight:700; font-size:.9rem;
+    display:grid; place-items:center;
+  }
+  .gates{margin:0; padding:0; list-style:none}
+  .gates li{display:flex; gap:.9rem; padding:.9rem 0; border-top:1px solid var(--line)}
+  .gates li:first-child{border-top:0}
+  .gates b{display:block}
+  .gates span{color:var(--muted); font-size:.95rem}
+  .tag{
+    flex:0 0 auto; font-size:.7rem; font-weight:700; letter-spacing:.06em;
+    background:var(--soft); color:var(--muted); border-radius:6px; padding:.25rem .45rem;
+    height:fit-content; margin-top:.15rem;
+  }
+  .price{
+    background:var(--panel); border:2px solid var(--accent); border-radius:var(--radius);
+    padding:1.5rem;
+  }
+  .price .amt{font-size:2.8rem; font-weight:700; letter-spacing:-.04em}
+  .price .amt em{font-size:1rem; font-weight:500; font-style:normal; color:var(--muted)}
+  .seats{
+    display:inline-block; background:var(--soft); border-radius:999px;
+    padding:.3rem .75rem; font-size:.84rem; font-weight:600; color:var(--warn);
+  }
+  details{border-top:1px solid var(--line); padding:.9rem 0}
+  details summary{cursor:pointer; font-weight:600; list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:"+ "; color:var(--accent); font-weight:700}
+  details[open] summary::before{content:"– "}
+  details p{color:var(--muted); margin-bottom:0}
+  .sample{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; font-size:.9rem;
+  }
+  .sample .head{background:var(--soft); padding:.7rem 1rem; font-weight:650; border-bottom:1px solid var(--line)}
+  .sample .row{padding:.85rem 1rem; border-bottom:1px solid var(--line)}
+  .sample .row:last-child{border-bottom:0}
+  .sample .ttl{font-weight:650}
+  .sample .meta{color:var(--muted); font-size:.85rem; margin-top:.2rem}
+  .pass{color:var(--accent); font-weight:650}
+  footer{padding-block:2.4rem; color:var(--muted); font-size:.88rem}
+  .disclaimer{
+    background:var(--soft); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1rem 1.15rem; font-size:.88rem; color:var(--muted); margin-top:1.4rem;
+  }
+  .byline{display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="nav">
+    <div class="brand">Sponsor<span>Ready</span></div>
+    <a class="quiet" href="#price">10 pilot places · £29 →</a>
+  </header>
+
+  <section id="hero">
+    <span class="eyebrow">For Graduate-route visa holders in the UK</span>
+    <h1 style="margin-top:1rem">Stop applying to UK jobs that can never sponsor you.</h1>
+    <p class="lede">
+      Most jobs you're applying to cannot sponsor you — the employer has no licence, or the
+      advertised salary sits below the legal minimum <em>for that specific occupation</em>. Your
+      application was rejected before anyone read it.
+    </p>
+    <p class="lede">
+      We check every job against the actual rules, then prepare the application for you.
+    </p>
+    <div class="cta-row">
+      <a class="btn" id="cta-top" href="#price">Take a pilot place — £29</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+    </div>
+    <p class="fineprint">One payment. 30 days. No subscription, nothing to cancel.</p>
+  </section>
+
+  <section id="problem">
+    <h2>The problem isn't your CV</h2>
+    <p class="lede">
+      Here is one real day of UK job postings, run through the checks on 13 September 2026:
+    </p>
+    <div class="grid g3" style="margin-top:1.4rem">
+      <div class="card"><div class="stat">6,417<small>UK postings read that day</small></div></div>
+      <div class="card"><div class="stat">87<small>survived every legal check</small></div></div>
+      <div class="card"><div class="stat">1.4%<small>of jobs were actually winnable</small></div></div>
+    </div>
+    <p style="margin-top:1.4rem">Why the rest were thrown out that day:</p>
+    <ul class="clean nope">
+      <li><b>84</b> weren't really in the UK or Ireland — a US or remote role with a London office mentioned</li>
+      <li><b>11</b> were at employers who had publicly stated they won't sponsor</li>
+      <li><b>7</b> required security clearance or British nationality</li>
+      <li><b>4</b> paid below the legal going rate for that occupation — so no licensed employer could sponsor them</li>
+    </ul>
+    <p>
+      That last one catches almost everybody. A licensed employer advertising a data role at
+      £45,000 still cannot sponsor you, because the going rate for that occupation code is higher.
+      A free "is this company a licensed sponsor?" checker will tell you to apply anyway.
+    </p>
+  </section>
+
+  <section id="checks">
+    <h2>What we check on every single job</h2>
+    <ul class="gates" style="margin-top:1.2rem">
+      <li><span class="tag">01</span><div><b>Is the employer licensed, right now?</b>
+        <span>Matched against the current Home Office register of licensed sponsors — A-rated, on the Skilled Worker route.</span></div></li>
+      <li><span class="tag">02</span><div><b>Have they sponsored consistently?</b>
+        <span>We hold four years of register snapshots. An employer who appeared once last year is a different risk from one present every year.</span></div></li>
+      <li><span class="tag">03</span><div><b>Can this salary legally be sponsored?</b>
+        <span>Checked against the going rate for that occupation code, not the headline general threshold. This is the check nothing else does.</span></div></li>
+      <li><span class="tag">04</span><div><b>Does the ad rule you out anyway?</b>
+        <span>Security clearance, existing right to work, nationality requirements, contract and day-rate roles that a visa can't cover.</span></div></li>
+      <li><span class="tag">05</span><div><b>Is the job actually in the UK?</b>
+        <span>"York" is not New York. "Cambridge, MA" is not Cambridge. Job boards get this wrong constantly and it wastes your week.</span></div></li>
+    </ul>
+    <p class="fineprint" style="margin-top:1.2rem">
+      Salary rules are re-verified against GOV.UK at least monthly. Last verified 10 October 2026.
+    </p>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <ol class="steps" style="margin-top:1.2rem">
+      <li><h3>You send your CV and your target roles</h3>
+        <p class="fineprint">Takes you ten minutes. A short call if you'd rather talk it through.</p></li>
+      <li><h3>We build your fact sheet — and you approve every line</h3>
+        <p class="fineprint">Every achievement on your CV gets written once, by you, with evidence behind it. Nothing is invented, ever. That's the whole point: your CV is tailored per job, but the facts never move.</p></li>
+      <li><h3>Every morning you get a short list, ready to send</h3>
+        <p class="fineprint">Only roles that passed all five checks. Each one with a tailored one-page CV, a cover note, answers to the sponsorship screening questions, and a LinkedIn outreach draft.</p></li>
+    </ol>
+  </section>
+
+  <section id="sample">
+    <h2>What lands in your inbox</h2>
+    <div class="sample" style="margin-top:1.2rem">
+      <div class="head">[Jobs] 10 October — 9 roles that can sponsor you</div>
+      <div class="row">
+        <div class="ttl">Lead Machine Learning Scientist — Monzo Bank</div>
+        <div class="meta">London · Licensed 4 years running · Salary <span class="pass">above the going rate</span> · posted 14 hours ago</div>
+        <div class="meta">CV tailored · cover note · screening answers · outreach draft</div>
+      </div>
+      <div class="row">
+        <div class="ttl">Senior AI Engineer — Multiverse</div>
+        <div class="meta">Edinburgh · Licensed 4 years running · Salary <span class="pass">above the going rate</span> · posted 2 days ago</div>
+        <div class="meta">CV tailored · cover note · screening answers · outreach draft</div>
+      </div>
+      <div class="row fineprint">…and the ones we rejected for you, with the reason, so you can check our work.</div>
+    </div>
+  </section>
+
+  <section id="price">
+    <h2>The pilot</h2>
+    <div class="grid g2" style="margin-top:1.2rem; align-items:start">
+      <div class="price">
+        <span class="seats">10 places only</span>
+        <div class="amt" style="margin-top:.8rem">£29 <em>one payment</em></div>
+        <p class="fineprint">30 days. No subscription, no renewal, nothing to cancel.</p>
+        <ul class="clean">
+          <li>Daily list of roles that can legally sponsor you</li>
+          <li>A tailored, fact-checked one-page CV for each</li>
+          <li>Cover note and sponsorship screening answers</li>
+          <li>LinkedIn outreach draft for the strongest matches</li>
+          <li>Direct line to me over email for the whole 30 days</li>
+        </ul>
+        <a class="btn" id="cta-pay" href="#" style="width:100%; text-align:center">Take a pilot place</a>
+        <p class="fineprint" style="margin-top:.9rem">
+          <b>If the first 7 days don't produce at least 10 roles that pass every check for your
+          profile, I refund you in full.</b> No argument, no form.
+        </p>
+      </div>
+      <div>
+        <h3>Why it's only ten places</h3>
+        <p class="fineprint">
+          I build each person's fact sheet by hand and read every match before it reaches you.
+          Ten is what I can do properly while holding a full-time job. When these go, the page
+          comes down until I can take more.
+        </p>
+        <h3 style="margin-top:1.4rem">Why it's cheap</h3>
+        <p class="fineprint">
+          Because you're the first ten, and your feedback is worth more to me than your money.
+          The price will not stay here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="not">
+    <h2>What this is not</h2>
+    <p class="lede">The things other tools in this space promise, and I won't.</p>
+    <ul class="clean nope" style="margin-top:1rem">
+      <li><b>We don't auto-apply for you.</b> Workday, Greenhouse and LinkedIn all prohibit it, and
+        bot applications get accounts blocked and employers permanently closed to you. You press send — on a
+        far shorter, far better list.</li>
+      <li><b>We don't promise interviews or jobs.</b> Anyone promising that in this market is
+        either guessing or lying to you.</li>
+      <li><b>We are not immigration advisers.</b> We give you job-market information and
+        applications. We do not advise on your visa, and we never will.</li>
+      <li><b>We don't invent anything on your CV.</b> Every claim is one you wrote and approved,
+        with evidence. You will be able to defend every line in the interview.</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>Questions</h2>
+    <details><summary>Why not just use a free sponsor-licence checker?</summary>
+      <p>Use one — they're useful, and free. They answer "has this company ever sponsored anyone?"
+      They can't answer "can this role sponsor me?", which needs the going rate for that occupation,
+      the employer's sponsorship history, and whether the ad itself rules you out. That's the gap
+      this fills.</p></details>
+    <details><summary>I'm on the Graduate visa with a few months left. Is it too late?</summary>
+      <p>That's exactly who this is for, and the honest answer depends on your remaining time —
+      switching takes planning. Email me with how long you have before you pay, and I'll tell you
+      straight whether 30 days of this helps you or not.</p></details>
+    <details><summary>Does it only cover tech and data roles?</summary>
+      <p>Right now the checks are sharpest on software, data, AI and machine-learning roles,
+      because that's the field I built it for. Ask me about your field before paying. If I can't
+      cover it properly, I'll say so rather than take your £29.</p></details>
+    <details><summary>Who actually sees my CV?</summary>
+      <p>Only me. It isn't sold, shared, or used to train anything. Ask me to delete it at any
+      point and it's gone the same day.</p></details>
+    <details><summary>What if I get hired in week two?</summary>
+      <p>Then it worked, and you keep the rest of the month. Tell me — I want to know what landed.</p></details>
+  </section>
+
+  <section id="who">
+    <h2>Who's behind this</h2>
+    <div class="byline">
+      <p class="lede" style="flex:1 1 320px">
+        I'm Mohammed Imtiazuddin, a Senior AI Engineer. I did my MSc in Data Science at Kingston
+        University London, and I built this system to run my own search for a sponsored UK role —
+        the legal checks, the register history, the tailored CVs, all of it. It runs every morning.
+        I'm opening it to ten people on the Graduate visa because I know precisely how much time
+        gets wasted on jobs that were never possible.
+        <br><br>
+        <a href="https://www.linkedin.com/in/imtiaz3/" id="li">Find me on LinkedIn</a> and check I'm
+        a real person before you send me anything.
+      </p>
+    </div>
+    <div class="disclaimer">
+      <b>Important.</b> SponsorReady provides job-market information and application preparation.
+      It is not immigration advice and we are not regulated immigration advisers. Salary thresholds
+      and sponsorship rules come from GOV.UK and are re-verified monthly, but they change — always
+      confirm your own position on GOV.UK or with a regulated adviser. We cannot guarantee
+      interviews, job offers, sponsorship, or a visa.
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <b>Refunds:</b> full refund within the first 7 days if the checks don't produce at least 10
+      qualifying roles for your profile, and any time before your fact sheet is built.
+      <br>
+      <b>Contact:</b> <a id="contact" href="#">email me</a> — I answer everything myself.
+    </p>
+    <p>© 2026 SponsorReady · Operated from India · Prices in GBP</p>
+  </footer>
+
+</div>
+
+<script>
+  // Wire the three constants into the page.
+  for (const el of [document.getElementById("cta-pay")]) {
+    if (PAYPAL_LINK && PAYPAL_LINK !== "#") { el.href = PAYPAL_LINK; }
+    else { el.href = "#price"; el.textContent = "Payment link coming — email me to hold a place"; }
+  }
+  const c = document.getElementById("contact");
+  c.href = "mailto:" + CONTACT_EMAIL + "?subject=SponsorReady%20pilot%20place";
+  c.textContent = CONTACT_EMAIL;
+
+  if (META_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_PIXEL_ID); fbq('track', 'PageView');
+    document.getElementById("cta-pay").addEventListener('click', () => fbq('track','InitiateCheckout'));
+  }
+</script>
+</body>
+</html>
